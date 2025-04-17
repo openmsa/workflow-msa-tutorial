@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-  CONTAINER_NAME: ubiqube/msa-wf-tutorial
+  CONTAINER_NAME: ubiqube/msa2-wf-tutorial
 
 jobs:
   build-and-publish:
