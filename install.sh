@@ -6,3 +6,8 @@ emit_step "Linking Tutorial."
 mk_meta_link "OpenMSA_Workflow_Tutorials" "Tutorials"
 popd || exit
 
+pushd /opt/fmc_repository/CommandDefinition || exit;
+emit_step "Linking Microservice Tutorial."
+popd || exit
+
+
