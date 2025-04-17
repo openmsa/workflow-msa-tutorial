@@ -1,0 +1,8 @@
+#!/bin/bash
+. /usr/share/install-libraries/il-lib.sh
+
+pushd /opt/fmc_repository/Process || exit;
+emit_step "Linking Tutorial."
+mk_meta_link "OpenMSA_Workflow_Tutorials" "Tutorials"
+popd || exit
+
