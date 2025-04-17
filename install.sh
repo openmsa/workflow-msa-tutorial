@@ -12,4 +12,7 @@ ln -fs ../OpenMSA_Workflow_Tutorials/Microservices/.meta_LINUX_Tutorials .meta_L
 ln -fs ../OpenMSA_Workflow_Tutorials/Microservices/LINUX_Tutorials LINUX_Tutorials
 popd || exit
 
+chown -R ncuser:ncuser /opt/fmc_repository/
+
+
 
