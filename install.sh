@@ -8,6 +8,8 @@ popd || exit
 
 pushd /opt/fmc_repository/CommandDefinition || exit;
 emit_step "Linking Microservice Tutorial."
+ln -fs ../OpenMSA_Workflow_Tutorials/Microservices/.meta_LINUX_Tutorials .meta_LINUX_Tutorials
+ln -fs ../OpenMSA_Workflow_Tutorials/Microservices/LINUX_Tutorials LINUX_Tutorials
 popd || exit
 
 
