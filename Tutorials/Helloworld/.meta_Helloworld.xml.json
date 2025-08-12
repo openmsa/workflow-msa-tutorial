@@ -1,0 +1,23 @@
+{
+  "uri" : "Process/workflows/Helloworld/Helloworld.xml",
+  "displayName" : "Helloworld",
+  "fileOwner" : "NCL",
+  "defaultTags" : [ ],
+  "imageUri" : "",
+  "description" : "File Description...",
+  "fileType" : "WORKFLOW",
+  "directoryRoot" : "PROCESS",
+  "tenantAccess" : [ "NCL" ],
+  "fileStatus" : "ACTIVE",
+  "extraData" : {
+    "createdBy" : "admin",
+    "lastUpdated" : 1755004749881,
+    "creationDate" : 1755004749881
+  },
+  "createdDate" : "2025-08-12T13:19:08.479178882Z",
+  "lastModifiedDate" : "2025-08-12T13:19:08.479178882Z",
+  "metaCreatedDate" : "2025-08-12T13:19:09.881238161Z",
+  "metaLastModifiedDate" : "2025-08-12T13:19:09.881238161Z",
+  "fileSyncStatus" : null,
+  "wizard" : false
+}

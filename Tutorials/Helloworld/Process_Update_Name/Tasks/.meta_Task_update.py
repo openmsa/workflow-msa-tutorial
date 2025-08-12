@@ -15,7 +15,7 @@
         </entry>
         <entry>
             <key>DISPLAYNAME</key>
-            <value>Task_task2.php</value>
+            <value>Task_update.py</value>
         </entry>
     </map>
 </metadata>

@@ -3,15 +3,19 @@
     <map>
         <entry>
             <key>TYPE</key>
-            <value>DIRECTORY</value>
+            <value>UPLOAD</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
             <value>Process</value>
         </entry>
         <entry>
+            <key>FILE_TYPE</key>
+            <value>text</value>
+        </entry>
+        <entry>
             <key>DISPLAYNAME</key>
-            <value>Process_print_message_for_admin_role__2_</value>
+            <value>Task_delete.py</value>
         </entry>
     </map>
 </metadata>
