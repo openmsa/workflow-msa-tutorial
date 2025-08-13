@@ -1,5 +1,5 @@
 {
-  "uri" : "Process/workflows/Helloworld/Helloworld.xml",
+  "uri" : "Process/Tutorials/Helloworld/Helloworld.xml",
   "displayName" : "Helloworld",
   "fileOwner" : "NCL",
   "defaultTags" : [ ],
