@@ -4,9 +4,6 @@
 pushd /opt/fmc_repository/Process || exit;
 emit_step "Linking Workflow Tutorial."
 mk_meta_link "OpenMSA_Workflow_Tutorials" "Tutorials"
-if [ "$(id -u)" -eq 0 ]; then
-	chown -R ncuser:ncuser /opt/fmc_repository/
-fi
 popd || exit
 
 pushd /opt/fmc_repository/CommandDefinition || exit;
