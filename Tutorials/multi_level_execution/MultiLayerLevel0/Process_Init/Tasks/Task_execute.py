@@ -25,7 +25,6 @@ for i in range(1):
     process_id = response.get('processId').get('id')
    
     orch.update_asynchronous_task_details(*async_update_list, str(processes))   
-    time.sleep(5)  # wait before next poll
     processes.append({"process_id": process_id, "status": "RUNNING"})
 
     orch.execute_service(SERVICE_NAME, CREATE_PROCESS_NAME, data)
