@@ -9,8 +9,8 @@
     <visibility>5</visibility>
     <wfConstraintsPath></wfConstraintsPath>
     <serviceTaskType>python</serviceTaskType>
-    <processToAssociateToTrashIcon/>
-    <name>MultiLayerLevel0</name>
+    <processToAssociateToTrashIcon>Delete</processToAssociateToTrashIcon>
+    <name>MultiLevelExecution L0</name>
     <group/>
   </information>
 </ObjectDefinition>
