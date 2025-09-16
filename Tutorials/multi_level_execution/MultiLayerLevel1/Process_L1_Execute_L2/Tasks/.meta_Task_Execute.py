@@ -3,27 +3,19 @@
     <map>
         <entry>
             <key>TYPE</key>
-            <value>FILE</value>
+            <value>UPLOAD</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
             <value>Process</value>
         </entry>
         <entry>
-            <key>MODEL</key>
-            <value>0</value>
-        </entry>
-        <entry>
             <key>FILE_TYPE</key>
             <value>text</value>
         </entry>
         <entry>
-            <key>MANUFACTURER</key>
-            <value>0</value>
-        </entry>
-        <entry>
             <key>DISPLAYNAME</key>
-            <value>MultiLayerLevel2.xml</value>
+            <value>Task_Execute.py</value>
         </entry>
     </map>
 </metadata>
