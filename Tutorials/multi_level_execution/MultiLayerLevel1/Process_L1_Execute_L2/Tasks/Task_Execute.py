@@ -37,7 +37,7 @@ while still_running:
         if p["status"] == "RUNNING":
             orch = Orchestration(ubiqube_id)
             status = orch.get_process_status_by_id(p["process_id"])
-            if status not in ["ENDED", "FAIL"]:  # process completed
+            if status not in ["ENDED", "FAIL"]:  # process not completed
                 still_running = True  # at least one still running
     orch.update_asynchronous_task_details(*async_update_list, str(processes))
     time.sleep(5)  # wait before next poll
