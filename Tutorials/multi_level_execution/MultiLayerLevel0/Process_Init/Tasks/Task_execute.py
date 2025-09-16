@@ -28,8 +28,6 @@ for i in range(1):
     time.sleep(5)  # wait before next poll
     processes.append({"process_id": process_id, "status": "RUNNING"})
 
-    orch.execute_service(SERVICE_NAME, CREATE_PROCESS_NAME, data)
-    response = json.loads(orch.content)
 
 still_running = True
 while still_running:
