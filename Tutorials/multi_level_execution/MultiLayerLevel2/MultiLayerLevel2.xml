@@ -1,6 +1,28 @@
 <ObjectDefinition>
   <variables frozen="0"/>
   <example/>
+  <process name="Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_L2_Execution">
+    <displayName>L2 Execution</displayName>
+    <type>CREATE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_Execute.py">
+      <processPath>/opt/fmc_repository/Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_L2_Execution/Tasks</processPath>
+      <displayName>Execute</displayName>
+    </task>
+    <processConstraintsPath></processConstraintsPath>
+  </process>
+  <process name="Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_delete">
+    <displayName>delete</displayName>
+    <type>DELETE</type>
+    <visibility>5</visibility>
+    <allowSchedule/>
+    <task name="Task_delete.py">
+      <processPath>/opt/fmc_repository/Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_delete/Tasks</processPath>
+      <displayName>delete</displayName>
+    </task>
+    <processConstraintsPath></processConstraintsPath>
+  </process>
   <information>
     <icon/>
     <description/>
@@ -9,7 +31,7 @@
     <visibility>5</visibility>
     <wfConstraintsPath></wfConstraintsPath>
     <serviceTaskType>python</serviceTaskType>
-    <processToAssociateToTrashIcon/>
+    <processToAssociateToTrashIcon>delete</processToAssociateToTrashIcon>
     <name>MultiLayerLevel2</name>
     <group/>
   </information>
