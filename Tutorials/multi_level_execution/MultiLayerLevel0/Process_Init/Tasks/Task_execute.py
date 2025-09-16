@@ -24,9 +24,8 @@ for i in range(1):
     service_id = response.get('serviceId').get('id')
     process_id = response.get('processId').get('id')
    
-    orch.update_asynchronous_task_details(*async_update_list, str(processes))   
     processes.append({"process_id": process_id, "status": "RUNNING"})
-
+    orch.update_asynchronous_task_details(*async_update_list, str(processes))   
 
 still_running = True
 while still_running:
