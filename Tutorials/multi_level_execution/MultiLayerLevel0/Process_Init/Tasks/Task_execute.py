@@ -40,6 +40,5 @@ while still_running:
     orch.update_asynchronous_task_details(*async_update_list, str(processes))
     time.sleep(5)  # wait before next poll
 
-ret = MSA_API.process_content('ENDED', 'Task OK', context, True)
-print(ret)
+task_success('L0 Execution Task OK', context, True)
 

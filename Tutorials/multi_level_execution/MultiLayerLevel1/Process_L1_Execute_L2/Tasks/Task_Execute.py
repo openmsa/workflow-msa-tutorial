@@ -39,8 +39,7 @@ while still_running:
             if status not in ["ENDED", "FAIL"]:  # process not completed
                 still_running = True  # at least one still running
     orch.update_asynchronous_task_details(*async_update_list, str(processes))
-    time.sleep(5)  # wait before next poll
+    time.sleep(1)  # wait before next poll
 
-ret = MSA_API.process_content('ENDED', 'Task OK', context, True)
-print(ret)
+task_success('L1 Execution Task OK', context, True)
 
