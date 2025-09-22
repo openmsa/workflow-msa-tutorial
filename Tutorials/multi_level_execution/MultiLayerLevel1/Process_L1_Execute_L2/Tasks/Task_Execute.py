@@ -15,7 +15,7 @@ SERVICE_NAME = 'Process/Tutorials/multi_level_execution/MultiLayerLevel2/MultiLa
 CREATE_PROCESS_NAME = 'Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_L2_Execution'
 processes = []
 
-for i in range(5):
+for i in range(20):
     orch = Orchestration(ubiqube_id)
     data = dict()
     data["input1"] = f"Process L2 instance {i+1}"
@@ -41,5 +41,5 @@ while still_running:
     orch.update_asynchronous_task_details(*async_update_list, str(processes))
     time.sleep(1)  # wait before next poll
 
-task_success('L1 Execution Task OK', context, True)
+MSA_API.task_success('L1 Execution Task OK', context, True)
 
