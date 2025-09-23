@@ -6,7 +6,4 @@ dev_var.add('devices.0.A.0.elt1')
 dev_var.add('devices.0.A.0.elt2')
 
 context = Variables.task_call(dev_var)
-ret = MSA_API.process_content('ENDED',
-                              f'Firewall service created. {len(context["devices"])} Managed Entity selected',
-                              context, True)
-print(ret)
+MSA_API.task_success(f'Firewall service created. {len(context["devices"])} Managed Entity selected', context)

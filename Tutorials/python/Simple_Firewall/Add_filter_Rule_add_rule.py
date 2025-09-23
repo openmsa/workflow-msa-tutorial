@@ -19,8 +19,13 @@ for device in devices:
   # extract the database ID
   device_db_id = device['id'][3:]
 
-  if context['icmp'] == 'true': context['dst_port'] = 'null'
-  
+  if context['icmp'] == 'true':
+    context['dst_port'] = 'null'
+  else:
+    dst_port = context['dst_port']
+    if not util.is_valid_port(dst_port):
+      MSA_API.task_failure(f'Invalid port number {dst_port}', context)
+
   # build the Microservice JSON params for the CREATE
   micro_service_vars_array = {"object_id": context['id'],
                               "src_ip": context['src_ip'],
@@ -51,14 +56,6 @@ for device in devices:
     context['rules'][num]['src_ip'] = context['src_ip']
     context['rules'][num]['dst_port'] = context['dst_port']
 
-    ret = MSA_API.process_content('ENDED',
-                                  f'STATUS: {content["status"]}, \
-                                  MESSAGE: {content["message"]}',
-                                  context, True)
+    MSA_API.task_success(f'STATUS: {content["status"]}, MESSAGE: {content["message"]}', context)
   else:
-    ret = MSA_API.process_content('FAILED',
-                                  f'Policy update failed \
-                                  - {order.content}',
-                                  context, True)
-
-print(ret)
+    MSA_API.task_failure(f'Policy update failed - {order.content}', context)

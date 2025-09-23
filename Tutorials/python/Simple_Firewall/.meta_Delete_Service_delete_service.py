@@ -2,16 +2,12 @@
 <metadata>
     <map>
         <entry>
-            <key>DATE_MODIFICATION</key>
-            <value>1588749827113</value>
+            <key>TYPE</key>
+            <value>UPLOAD</value>
         </entry>
         <entry>
             <key>REPOSITORY</key>
             <value>Process</value>
-        </entry>
-        <entry>
-            <key>DATE_CREATION</key>
-            <value>1588749827108</value>
         </entry>
         <entry>
             <key>TAG</key>
@@ -21,11 +17,11 @@
             <value>text</value>
         </entry>
         <entry>
-            <key>TYPE</key>
-            <value>UPLOAD</value>
+            <key>COMMENT</key>
         </entry>
         <entry>
-            <key>COMMENT</key>
+            <key>DISPLAYNAME</key>
+            <value>Delete_Service_delete_service.py</value>
         </entry>
     </map>
 </metadata>
