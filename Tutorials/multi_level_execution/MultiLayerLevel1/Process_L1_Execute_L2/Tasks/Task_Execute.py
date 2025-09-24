@@ -10,6 +10,7 @@ context = Variables.task_call(dev_var)
 
 ubiqube_id = context['UBIQUBEID']
 async_update_list = (context['PROCESSINSTANCEID'], context['TASKID'], context['EXECNUMBER'])
+header = context["input1"]
 
 SERVICE_NAME = 'Process/Tutorials/multi_level_execution/MultiLayerLevel2/MultiLayerLevel2'
 CREATE_PROCESS_NAME = 'Process/Tutorials/multi_level_execution/MultiLayerLevel2/Process_L2_Execution'
@@ -18,7 +19,7 @@ processes = []
 for i in range(100):
     orch = Orchestration(ubiqube_id)
     data = dict()
-    data["input1"] = f"Process L2 instance {i+1}"
+    data["input1"] = f"{header}, Process L2 instance {i+1}"
     orch.execute_service(SERVICE_NAME, CREATE_PROCESS_NAME, data)
     response = json.loads(orch.content)
     
