@@ -20,7 +20,7 @@
   </variables>  <example>    <content>
       <?php?>
     </content>  </example>
-  <process name="Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create_instance">
+  <process name="Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create_instance">
     <visibility>5</visibility>
     <displayName>create instance</displayName>
     <icon/>
@@ -29,11 +29,11 @@
     <allowSchedule>false</allowSchedule>
     <type>CREATE</type>
     <task name="Task_T1.php">
-      <processPath>/opt/fmc_repository/Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create_instance/Tasks/</processPath>
+      <processPath>/opt/fmc_repository/Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create_instance/Tasks/</processPath>
       <displayName>T1</displayName>
     </task>
   </process>
-<process name="Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_delete_instance">
+<process name="Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_delete_instance">
     <visibility>5</visibility>
     <displayName>delete_instance</displayName>
     <icon/>
