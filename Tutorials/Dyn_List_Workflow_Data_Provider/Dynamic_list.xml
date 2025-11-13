@@ -18,7 +18,7 @@
   </information>  <variables frozen="0">
     <variable displayName="data providers instances" displayOrder="1" isMandatory="true" maxLength="100" name="params.list" numberOfRowMax="0" refServiceURI="Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Data_provider.xml" startIncrement="0" tableSizeFix="false" type="ServiceRef"/>
   </variables>  <example>    <content/>  </example>
-<process name="Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create">
+<process name="Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create">
     <visibility>5</visibility>
     <displayName>create</displayName>
     <icon/>
@@ -27,11 +27,11 @@
     <allowSchedule>false</allowSchedule>
     <type>CREATE</type>
     <task name="Task_T1.php">
-      <processPath>/opt/fmc_repository/Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create/Tasks/</processPath>
+      <processPath>/opt/fmc_repository/Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_create/Tasks/</processPath>
       <displayName>T1</displayName>
     </task>
   </process>
-  <process name="Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_update">
+  <process name="Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_update">
     <visibility>5</visibility>
     <displayName>update</displayName>
     <icon/>
@@ -40,7 +40,7 @@
     <allowSchedule>false</allowSchedule>
     <type>UPDATE</type>
     <task name="Task_T1.php">
-      <processPath>/opt/fmc_repository/Process/MARK-104/Tutorials/Dyn_List_Workflow_Data_Provider/Process_update/Tasks/</processPath>
+      <processPath>/opt/fmc_repository/Process/Tutorials/Dyn_List_Workflow_Data_Provider/Process_update/Tasks/</processPath>
       <displayName>T1</displayName>
     </task>
   </process>
