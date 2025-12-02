@@ -10,5 +10,4 @@ name = context.get('name')
 
 context.update(name=name)
 
-ret = MSA_API.process_content('ENDED', 'Task OK', context, True)
-print(ret)
+MSA_API.task_success('Task OK', context)

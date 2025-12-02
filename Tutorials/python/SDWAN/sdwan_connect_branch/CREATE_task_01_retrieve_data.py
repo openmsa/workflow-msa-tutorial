@@ -23,10 +23,4 @@ context['right_device_id'] = right_device_id
 context['left_device_ip'] = left_device.management_address
 context['right_device_ip'] = right_device.management_address
 
-ret = MSA_API.process_content('ENDED',
-                              f'IPsec data retrieved \
-                               site-A: {context}, \
-                               site-Z: {context}',
-                              context, True)
-
-print(ret)
+MSA_API.task_success(f'IPsec data retrieved site-A: {context}, site-Z: {context}', context)

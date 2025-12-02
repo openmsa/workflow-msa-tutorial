@@ -14,22 +14,12 @@ try:
     order = Order(context["left_device_id"])
     order.command_execute("CREATE", context["sdwan_loopback_left"])
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
 try:
     order = Order(context["right_device_id"])
     order.command_execute('CREATE', context["sdwan_loopback_right"])
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
-ret = MSA_API.process_content('ENDED',
-                              f'Loopbacks Created.',
-                              context, True)
-
-print(ret)
+MSA_API.task_success(f'Loopbacks Created.', context)

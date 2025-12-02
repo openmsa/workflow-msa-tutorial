@@ -42,5 +42,4 @@ for address in addresses:
   i += 1
 
   
-ret = MSA_API.process_content('ENDED', 'IP addresses tested', context, True)
-print(ret)
+MSA_API.task_success('IP addresses tested', context)
