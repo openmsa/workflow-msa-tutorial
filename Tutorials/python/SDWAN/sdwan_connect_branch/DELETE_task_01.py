@@ -18,10 +18,7 @@ try:
     order.command_execute("DELETE", {"sdwan_ipsec_conf": sdwan_ipsec_conf_ms_data})
     order.command_execute("DELETE", {"sdwan_ipsec_conf_cryptomap": sdwan_ipsec_conf_cryptomap_ms_data})
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
 # right device cleanup
 try:
@@ -31,11 +28,6 @@ try:
     order.command_execute("DELETE", {"sdwan_ipsec_conf": context['id']})
     order.command_execute("DELETE", {"sdwan_ipsec_conf_cryptomap": context['id']})
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
-ret = MSA_API.process_content('ENDED', f'IPsec instance deleted.', context, True)
-
-print(ret)
+MSA_API.task_success(f'IPsec instance deleted.', context)

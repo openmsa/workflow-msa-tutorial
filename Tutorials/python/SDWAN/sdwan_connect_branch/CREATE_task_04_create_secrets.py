@@ -11,23 +11,13 @@ try:
     order = Order(context["left_device_id"])
     order.command_execute("CREATE", context["sdwan_ipsec_secret_left"])
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
 try:
     order = Order(context["right_device_id"])
     order.command_execute('CREATE', context["sdwan_ipsec_secret_right"])
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
-    print(ret)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
 
-ret = MSA_API.process_content('ENDED',
-                              f'Secrets Created.',
-                              context, True)
-
-print(ret)
+MSA_API.task_success(f'Secrets Created.', context)

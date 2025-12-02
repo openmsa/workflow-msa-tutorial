@@ -107,8 +107,4 @@ context["sdwan_ipsec_conf_crypto_map_left"] = sdwan_ipsec_conf_crypto_map_left
 context["sdwan_ipsec_conf_crypto_map_right"] = sdwan_ipsec_conf_crypto_map_right
 
 
-ret = MSA_API.process_content('ENDED',
-                              f'IPsec data prepared {context["sdwan_loopback_left"]}',
-                              context, True)
-
-print(ret)
+MSA_API.task_success(f'IPsec data prepared {context["sdwan_loopback_left"]}', context)

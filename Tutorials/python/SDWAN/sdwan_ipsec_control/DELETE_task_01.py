@@ -12,12 +12,6 @@ try:
     order = Order(context['short_device_id'])
     order.command_execute('DELETE', {"sdwan_ipsec_start": ms_sdwan_ipsec_start})
 except Exception as e:
-    ret = MSA_API.process_content('FAILED',
-                                  f'ERROR: {str(e)}',
-                                  context, True)
+    MSA_API.task_error(f'ERROR: {str(e)}', context)
 
-ret = MSA_API.process_content('ENDED',
-                              f'Take IPsec control.',
-                              context, True)
-
-print(ret)
+MSA_API.task_success(f'Take IPsec control.', context)
